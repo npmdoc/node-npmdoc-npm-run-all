@@ -1,11 +1,13 @@
-# api documentation for  [npm-run-all (v4.0.2)](https://github.com/mysticatea/npm-run-all)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-run-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-run-all)
+# api documentation for  [npm-run-all (v4.0.2)](https://github.com/mysticatea/npm-run-all)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-run-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-run-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-run-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-run-all)
 #### A CLI tool to run multiple npm-scripts in parallel or sequential.
 
 [![NPM](https://nodei.co/npm/npm-run-all.png?downloads=true)](https://www.npmjs.com/package/npm-run-all)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-npm_run_all_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-npm-run-all%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
