@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/npm-run-all.png?downloads=true)](https://www.npmjs.com/package/npm-run-all)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-npm-run-all%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-npm-run-all%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.npmPackageListing.svg)
 
