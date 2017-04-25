@@ -1,9 +1,14 @@
-# api documentation for  [npm-run-all (v4.0.2)](https://github.com/mysticatea/npm-run-all)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-run-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-run-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-run-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-run-all)
+# npmdoc-npm-run-all
+
+#### basic api documentation for  [npm-run-all (v4.0.2)](https://github.com/mysticatea/npm-run-all)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-run-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-run-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-run-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-run-all)
+
 #### A CLI tool to run multiple npm-scripts in parallel or sequential.
 
-[![NPM](https://nodei.co/npm/npm-run-all.png?downloads=true)](https://www.npmjs.com/package/npm-run-all)
+[![NPM](https://nodei.co/npm/npm-run-all.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/npm-run-all)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-npm-run-all%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-npm-run-all/build/screenCapture.npmPackageListing.svg)
 
@@ -81,13 +86,11 @@
     "main": "lib/index.js",
     "maintainers": [
         {
-            "name": "mysticatea",
-            "email": "star.ctor@gmail.com"
+            "name": "mysticatea"
         }
     ],
     "name": "npm-run-all",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/mysticatea/npm-run-all.git"
@@ -107,16 +110,6 @@
     "version": "4.0.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module npm-run-all](#apidoc.module.npm-run-all)
-
-
-
-# <a name="apidoc.module.npm-run-all"></a>[module npm-run-all](#apidoc.module.npm-run-all)
 
 
 
