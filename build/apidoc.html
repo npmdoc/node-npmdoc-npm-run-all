@@ -61,12 +61,105 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.npm-run-all">module npm-run-all</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-run-all.npm-run-all">
+            function <span class="apidocSignatureSpan"></span>npm-run-all
+            <span class="apidocSignatureSpan">(patternOrPatterns, options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.npm-run-all" id="apidoc.module.npm-run-all">module npm-run-all</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-run-all.npm-run-all" id="apidoc.element.npm-run-all.npm-run-all">
+        function <span class="apidocSignatureSpan"></span>npm-run-all
+        <span class="apidocSignatureSpan">(patternOrPatterns, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function npmRunAll(patternOrPatterns, options) {
+    const stdin = (options &#x26;&#x26; options.stdin) || null
+    const stdout = (options &#x26;&#x26; options.stdout) || null
+    const stderr = (options &#x26;&#x26; options.stderr) || null
+    const taskList = (options &#x26;&#x26; options.taskList) || null
+    const config = (options &#x26;&#x26; options.config) || null
+    const packageConfig = (options &#x26;&#x26; options.packageConfig) || null
+    const args = (options &#x26;&#x26; options.arguments) || []
+    const parallel = Boolean(options &#x26;&#x26; options.parallel)
+    const silent = Boolean(options &#x26;&#x26; options.silent)
+    const continueOnError = Boolean(options &#x26;&#x26; options.continueOnError)
+    const printLabel = Boolean(options &#x26;&#x26; options.printLabel)
+    const printName = Boolean(options &#x26;&#x26; options.printName)
+    const race = Boolean(options &#x26;&#x26; options.race)
+    const maxParallel = parallel ? ((options &#x26;&#x26; options.maxParallel) || 0) : 1
+    const npmPath = options &#x26;&#x26; options.npmPath
+    try {
+        const patterns = parsePatterns(patternOrPatterns, args)
+        if (patterns.length === 0) {
+            return Promise.resolve(null)
+        }
+        if (taskList != null &#x26;&#x26; Array.isArray(taskList) === false) {
+            throw new Error(&#x22;Invalid options.taskList&#x22;)
+        }
+        if (typeof maxParallel !== &#x22;number&#x22; || !(maxParallel &#x3e;= 0)) {
+            throw new Error(&#x22;Invalid options.maxParallel&#x22;)
+        }
+        if (!parallel &#x26;&#x26; race) {
+            throw new Error(&#x22;Invalid options.race&#x22;)
+        }
+
+        const prefixOptions = [].concat(
+            silent ? [&#x22;--silent&#x22;] : [],
+            packageConfig ? toOverwriteOptions(packageConfig) : [],
+            config ? toConfigOptions(config) : []
+        )
+
+        return Promise.resolve()
+            .then(() =&#x3e; {
+                if (taskList != null) {
+                    return {taskList, packageInfo: null}
+                }
+                return readPackageJson()
+            })
+            .then(x =&#x3e; {
+                const tasks = matchTasks(x.taskList, patterns)
+                const labelWidth = tasks.reduce(maxLength, 0)
+
+                return runTasks(tasks, {
+                    stdin,
+                    stdout,
+                    stderr,
+                    prefixOptions,
+                    continueOnError,
+                    labelState: {
+                        enabled: printLabel,
+                        width: labelWidth,
+                        lastPrefix: null,
+                        lastIsLinebreak: true,
+                    },
+                    printName,
+                    packageInfo: x.packageInfo,
+                    race,
+                    maxParallel,
+                    npmPath,
+                })
+            })
+    }
+    catch (err) {
+        return Promise.reject(new Error(err.message))
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

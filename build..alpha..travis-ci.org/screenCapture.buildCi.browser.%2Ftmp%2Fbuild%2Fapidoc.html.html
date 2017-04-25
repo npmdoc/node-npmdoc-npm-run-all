@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/mysticatea/npm-run-all"
-
-    >npm-run-all (v4.0.2)</a>
+    <a href="https://github.com/mysticatea/npm-run-all">npm-run-all (v4.0.2)</a>
 </h1>
 <h4>A CLI tool to run multiple npm-scripts in parallel or sequential.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.npm-run-all">module npm-run-all</a><ol>
 
@@ -86,50 +79,50 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function npmRunAll(patternOrPatterns, options) {
-    const stdin = (options &#x26;&#x26; options.stdin) || null
-    const stdout = (options &#x26;&#x26; options.stdout) || null
-    const stderr = (options &#x26;&#x26; options.stderr) || null
-    const taskList = (options &#x26;&#x26; options.taskList) || null
-    const config = (options &#x26;&#x26; options.config) || null
-    const packageConfig = (options &#x26;&#x26; options.packageConfig) || null
-    const args = (options &#x26;&#x26; options.arguments) || []
-    const parallel = Boolean(options &#x26;&#x26; options.parallel)
-    const silent = Boolean(options &#x26;&#x26; options.silent)
-    const continueOnError = Boolean(options &#x26;&#x26; options.continueOnError)
-    const printLabel = Boolean(options &#x26;&#x26; options.printLabel)
-    const printName = Boolean(options &#x26;&#x26; options.printName)
-    const race = Boolean(options &#x26;&#x26; options.race)
-    const maxParallel = parallel ? ((options &#x26;&#x26; options.maxParallel) || 0) : 1
-    const npmPath = options &#x26;&#x26; options.npmPath
+    const stdin = (options &amp;&amp; options.stdin) || null
+    const stdout = (options &amp;&amp; options.stdout) || null
+    const stderr = (options &amp;&amp; options.stderr) || null
+    const taskList = (options &amp;&amp; options.taskList) || null
+    const config = (options &amp;&amp; options.config) || null
+    const packageConfig = (options &amp;&amp; options.packageConfig) || null
+    const args = (options &amp;&amp; options.arguments) || []
+    const parallel = Boolean(options &amp;&amp; options.parallel)
+    const silent = Boolean(options &amp;&amp; options.silent)
+    const continueOnError = Boolean(options &amp;&amp; options.continueOnError)
+    const printLabel = Boolean(options &amp;&amp; options.printLabel)
+    const printName = Boolean(options &amp;&amp; options.printName)
+    const race = Boolean(options &amp;&amp; options.race)
+    const maxParallel = parallel ? ((options &amp;&amp; options.maxParallel) || 0) : 1
+    const npmPath = options &amp;&amp; options.npmPath
     try {
         const patterns = parsePatterns(patternOrPatterns, args)
         if (patterns.length === 0) {
             return Promise.resolve(null)
         }
-        if (taskList != null &#x26;&#x26; Array.isArray(taskList) === false) {
-            throw new Error(&#x22;Invalid options.taskList&#x22;)
+        if (taskList != null &amp;&amp; Array.isArray(taskList) === false) {
+            throw new Error("Invalid options.taskList")
         }
-        if (typeof maxParallel !== &#x22;number&#x22; || !(maxParallel &#x3e;= 0)) {
-            throw new Error(&#x22;Invalid options.maxParallel&#x22;)
+        if (typeof maxParallel !== "number" || !(maxParallel &gt;= 0)) {
+            throw new Error("Invalid options.maxParallel")
         }
-        if (!parallel &#x26;&#x26; race) {
-            throw new Error(&#x22;Invalid options.race&#x22;)
+        if (!parallel &amp;&amp; race) {
+            throw new Error("Invalid options.race")
         }
 
         const prefixOptions = [].concat(
-            silent ? [&#x22;--silent&#x22;] : [],
+            silent ? ["--silent"] : [],
             packageConfig ? toOverwriteOptions(packageConfig) : [],
             config ? toConfigOptions(config) : []
         )
 
         return Promise.resolve()
-            .then(() =&#x3e; {
+            .then(() =&gt; {
                 if (taskList != null) {
                     return {taskList, packageInfo: null}
                 }
                 return readPackageJson()
             })
-            .then(x =&#x3e; {
+            .then(x =&gt; {
                 const tasks = matchTasks(x.taskList, patterns)
                 const labelWidth = tasks.reduce(maxLength, 0)
 
@@ -169,3 +162,4 @@
     ]
 </div>
 </div>
+</body></html>
